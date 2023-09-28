@@ -9,8 +9,10 @@ function desenharQuadrado(x1, x2, y1, y2, cor){
 }
 
 function desenharArco(x, y ,r, ang1, ang2, cor) {
+    ctx.beginPath();
     ctx.fillStyle = cor
-    ctx.arc(x,y,r,ang1,ang2, 2*Math.PI)
+    ctx.arc(200,200,50,ang1,ang2);
+    ctx.closePath();
 }
 
 function desenharLinha(x1, x2, y1, y2, cor) {
@@ -45,3 +47,5 @@ desenharLinha(0,150,0,150, "blue")
 desenharLinha(255,150,45,150, "red")
 desenharLinha(300,0,150,150, "green")
 desenharLinha(150,0,150,40000, "blue")
+
+// desenharArco(10,10,10,10,10,"black")
